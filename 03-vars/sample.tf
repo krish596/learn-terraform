@@ -27,3 +27,16 @@ variable "fruit" {
 output "fruit" {
   value = var.fruit
 }
+
+# Map Variable
+
+variable "fruit_with_stock" {
+  default = {
+    watermelon = 100
+    orange = 200
+  }
+}
+
+output "fruit_with_stock" {
+  value = var.fruit_with_stock["orange"].stock
+}
