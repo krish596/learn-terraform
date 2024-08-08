@@ -1,5 +1,5 @@
 variable "fruits" {
-  default = "hello world"
+  default = "apple"
 }
 
 output "fruits" {
@@ -61,4 +61,8 @@ variable "fruit_with_stock_price" {
 
 output "fruit_with_stock_price" {
   value = var.fruit_with_stock_price["apple"].stock
+}
+
+output "fruit_with_1" {
+  value = var.fruit_with_stock_price["banana"].price
 }
