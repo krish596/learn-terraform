@@ -9,8 +9,8 @@ output "fruits" {
 # List Variable
 variable "fruit_with" {
   default = [
-    apple,
-    banana
+    "apple",
+    "banana"
   ]
 
 }
