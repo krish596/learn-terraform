@@ -1,5 +1,5 @@
 variable "fruits" {
-  default = apple
+  default = "hello world"
 }
 
 output "fruits" {
