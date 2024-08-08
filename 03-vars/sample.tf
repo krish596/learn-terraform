@@ -14,3 +14,7 @@ variable "fruit_with" {
   ]
 
 }
+
+output "fruit_with" {
+  value = var.fruit_with[1]
+}
