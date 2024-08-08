@@ -18,3 +18,12 @@ variable "fruit_with" {
 output "fruit_with" {
   value = var.fruit_with[1]
 }
+
+# Plain Variable
+variable "fruit" {
+  default = "kiwi"
+}
+
+output "fruit" {
+  value = var.fruit
+}
