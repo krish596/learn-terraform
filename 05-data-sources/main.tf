@@ -1,4 +1,4 @@
-data "aws_ami_ids" "ami" {
+data "aws_ami_id" "ami" {
 
   name_regex = "centos-*"
   owners = ["973714476881"]
@@ -6,5 +6,5 @@ data "aws_ami_ids" "ami" {
 }
 
 output "aws_ami" {
-  value = data.aws_ami_ids.ami
+  value = data.aws_ami_id.ami
 }
