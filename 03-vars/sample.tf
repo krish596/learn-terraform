@@ -32,8 +32,11 @@ output "fruit" {
 
 variable "fruit_with_stock" {
   default = {
-    watermelon = 100
-    orange = 200
+    stock = {
+      watermelon = 100
+      orange = 200
+    }
+
   }
 }
 
