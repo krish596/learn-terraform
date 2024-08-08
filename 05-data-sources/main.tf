@@ -1,4 +1,4 @@
-data "aws_ami" "ami" {
+data "aws_ami_ids" "ami" {
 
   most_recent      = true
   owners           = ["973714476881"]
@@ -6,5 +6,5 @@ data "aws_ami" "ami" {
 }
 
 output "ami" {
-  value = data.aws_ami.ami.id
+  value = data.aws_ami_ids.ami
 }
