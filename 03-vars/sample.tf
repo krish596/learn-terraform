@@ -41,5 +41,5 @@ variable "fruit_with_stock" {
 }
 
 output "fruit_with_stock" {
-  value = var.fruit_with_stock["orange"]
+  value = var.fruit_with_stock[1]
 }
