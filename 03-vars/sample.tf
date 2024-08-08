@@ -5,3 +5,12 @@ variable "fruits" {
 output "fruits" {
   value = var.fruits
 }
+
+# List Variable
+variable "fruit_with" {
+  default = [
+    apple,
+    banana
+  ]
+
+}
