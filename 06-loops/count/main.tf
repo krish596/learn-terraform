@@ -18,6 +18,7 @@
 
 variable "components" {
   default = {
+    redis = { name = "redis-sg" }
     catalogue = { name = "catalogue-sg" }
     mongodb = { name = "mongodb-sg" }
 
