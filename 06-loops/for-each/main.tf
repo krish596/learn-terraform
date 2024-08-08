@@ -16,6 +16,6 @@ resource "aws_instance" "instance" {
 
   tags = {
     #     Name = var.components[count.index]
-    Name = element(var.components,count.index)
+    Name = lookup(var.components, each.value["name"], null )
   }
 }
