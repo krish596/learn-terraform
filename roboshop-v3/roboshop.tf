@@ -52,5 +52,5 @@ resource "aws_route53_record" "record" {
   name    = "${components}-dev.kr7348202.online"
   type    = "A"
   ttl     = 30
-  records = [aws_instance.instance.private_ip]
+  records = lookup(lookup(var.components, each.key, null), private_ip, null)
 }
