@@ -44,7 +44,9 @@ resource "aws_instance" "instance" {
   }
 }
 
-
+output "test" {
+  value = lookup(var.components, frontend, null)
+}
 
 # resource "aws_route53_record" "record" {
 #   for_each = var.components
