@@ -46,7 +46,7 @@ resource "aws_instance" "instance" {
 
 
 
-resource "aws_route53_record" "frontend" {
+resource "aws_route53_record" "record" {
   zone_id = var.zone_id
   name    = "${component}-dev.kr7348202.online"
   type    = "A"
