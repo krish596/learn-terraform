@@ -9,7 +9,4 @@ module "components" {
   instance_type = each.value["instance_type"]
 
 
-
-
-
 }

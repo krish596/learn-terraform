@@ -10,6 +10,7 @@ variable "security_group" {
 
 variable "components" {
   default = {
+
     frontend = {
       name = "frontend"
       instance_type = "t3.small"
