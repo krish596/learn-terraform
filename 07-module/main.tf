@@ -9,6 +9,8 @@ output "test" {
   value = module.test
 }
 
-variable "instance_type" {}
+variable "instance_type" {
+  default = "t3.small"
+}
 
 
