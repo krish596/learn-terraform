@@ -5,8 +5,5 @@ data "aws_ami_ids" "ami" {
 
 }
 
-resource "aws_instance" "instance" {
-  ami        = data.aws_ami_ids.ami
-  instance_type = "t3.small"
-}
+
 
