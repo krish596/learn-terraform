@@ -1,5 +1,6 @@
 module "test" {
   source = "./local-module"
+  instance_type = var.instance_type
 
 
 }
@@ -7,3 +8,5 @@ module "test" {
 output "test" {
   value = module.test
 }
+
+variable "instance_type" {}
