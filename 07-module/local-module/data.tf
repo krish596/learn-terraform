@@ -6,4 +6,3 @@ data "aws_ami_ids" "ami" {
 }
 
 
-
