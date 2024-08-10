@@ -17,5 +17,4 @@ variable "components" {
   }
 }
 
-variable "name" {}
-variable "instance_type" {}
+
