@@ -10,6 +10,11 @@ resource "aws_instance" "instance" {
   }
 }
 
+provisioner "local-exec" {
+  command = ""
+}
+
+
 
 
 resource "aws_route53_record" "record" {
