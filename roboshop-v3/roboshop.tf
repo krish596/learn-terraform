@@ -17,16 +17,16 @@ variable "security_group" {
 variable "components" {
 
   default = {
-    frontend = "{ name = frontend }"
-    mongodb = "{ name = mongodb }"
-    catalogue = "{ name = catalogue }"
-    redis = "{ name = redis }"
-    user = "{ name = user }"
-    cart = "{ name = cart }"
-    mysql = "{ name = mysql }"
-    shipping = "{ name = shipping }"
-    rabbitmq = "{ name = rabbitmq }"
-    payment = "{ name = payment }"
+    frontend = "{ name = frontend-dev }"
+    mongodb = "{ name = mongodb-dev }"
+    catalogue = "{ name = catalogue-dev }"
+    redis = "{ name = redis-dev }"
+    user = "{ name = user-dev }"
+    cart = "{ name = cart-dev }"
+    mysql = "{ name = mysql-dev }"
+    shipping = "{ name = shipping-dev }"
+    rabbitmq = "{ name = rabbitmq-dev }"
+    payment = "{ name = payment-dev }"
   }
 
 
@@ -49,8 +49,8 @@ resource "aws_instance" "instance" {
 resource "aws_route53_record" "record" {
   for_each = var.components
   zone_id = var.zone_id
-  name    = "${lookup(var.components, each.key, null)}-dev.kr7348202.online"
-  type    = "CNAME"
+  name    = "${lookup(var.components, each.key, null)}.kr7348202.online"
+  type    = "A"
   ttl     = 30
   records = [lookup(lookup(aws_instance.instance, each.key, null), "private_ip", null)]
 }
