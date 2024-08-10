@@ -10,4 +10,3 @@ resource "aws_instance" "instance" {
   instance_type = "t3.small"
 }
 
-variable "instance_type" {}
