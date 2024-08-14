@@ -20,6 +20,14 @@ variable "vpc" {
   }
 }
 
+# output "all_subnets" {
+#   value = var.vpc["subnets"]
+# }
+
 output "all_subnets" {
-  value = var.vpc["subnets"]
+  value = [for k,v in vap.vpc["main"]["subnets"] :v]
 }
+
+# output "subnets" {
+#   value = { for k,v in merge(var.vpc["subnets"]), k=> v }
+# }
