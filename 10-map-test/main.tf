@@ -25,7 +25,7 @@ variable "vpc" {
 # }
 
 output "all_subnets" {
-  value = [ for k,v in var.vpc["main"]["subnets"] :v ]
+  value = [ for k,v in var.vpc["subnets"] :v ]
 }
 
 # output "subnets" {
